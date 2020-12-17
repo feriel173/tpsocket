@@ -17,7 +17,9 @@ public class Client {
         BufferedReader inClient = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter outClient = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 
-        String str = "Hello World";
+        BufferedReader keyboard=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("saisir un entier positif : ");
+        String str=keyboard.readLine();
         outClient.println(str); // send msg
 
         //close in / out
